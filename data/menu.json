@@ -1,0 +1,10 @@
+[
+  {"id": "na-cienkim", "category": "Kebaby", "name": "Na cienkim", "description": "Kebab w cienkim cieście z surówkami i sosem.", "price": 31, "image": "/img/na-cienkim.jpg", "emoji": "🌯"},
+  {"id": "pita-kebab", "category": "Kebaby", "name": "Pita kebab", "description": "Mięso w pszennej picie z warzywami.", "price": 29, "image": "/img/pita-kebab.jpg", "emoji": "🥙"},
+  {"id": "kebab-box", "category": "Kebaby", "name": "Kebab Box", "description": "150 g mięsa z frytkami, surówkami i sosem.", "price": 35, "image": "/img/kebab-box.jpg", "emoji": "🍟"},
+  {"id": "mieso-na-talerzu", "category": "Kebaby", "name": "Mięso na talerzu", "description": "Krojone mięso z frytkami, surówkami i sosem.", "price": 55, "image": "/img/mieso-na-talerzu.jpg", "emoji": "🍽️"},
+  {"id": "falafel-kebab", "category": "Kebaby", "name": "Falafel kebab", "description": "Kotleciki z ciecierzycy w cienkim cieście.", "price": 25, "image": "/img/falafel-kebab.jpg", "emoji": "🧆"},
+  {"id": "zestaw-na-cienkim", "category": "Zestawy", "name": "Zestaw na cienkim", "description": "Kebab, 100 g frytek i Pepsi 0,33 l.", "price": 43, "image": "/img/zestaw-na-cienkim.jpg", "emoji": "🥤"},
+  {"id": "zupa-z-soczewicy", "category": "Zupy i desery", "name": "Zupa z soczewicy", "description": "Podawana z pitą.", "price": 24, "image": "/img/zupa-z-soczewicy.jpg", "emoji": "🍲"},
+  {"id": "baklawa", "category": "Zupy i desery", "name": "Baklawa", "description": "Na deser, 1 sztuka.", "price": 12, "image": "/img/baklawa.jpg", "emoji": "🍯"}
+]

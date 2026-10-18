@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Astana Kebab · Menu i zamówienia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Golos+Text:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="logo" href="/">Astana <span>Kebab</span></a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="/historia/">Historia</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Marszałkowska 6 · Warszawa</div>
+    <h1>Kebab z rożna<span>na wynos i z dostawą</span></h1>
+    <p>Wybierz dania, dodaj do koszyka i zamów online. Płacisz przy odbiorze.</p>
+  </div>
+</section>
+
+<main class="wrap layout">
+  <section id="menu" aria-label="Menu">
+    <div id="menu-list"><p class="muted">Ładowanie menu…</p></div>
+  </section>
+
+  <aside id="cart" class="cart" aria-label="Koszyk">
+    <div class="cart-head">
+      <h2>Koszyk</h2>
+      <button type="button" class="close" id="cart-close" aria-label="Zamknij koszyk">×</button>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <p id="cart-empty" class="muted">Koszyk jest pusty.</p>
+    <div class="cart-total"><span>Razem</span><strong id="cart-total">0,00 zł</strong></div>
+
+    <form id="order-form" novalidate>
+      <fieldset class="type">
+        <legend>Sposób odbioru</legend>
+        <label><input type="radio" name="type" value="pickup" checked> Odbiór osobisty</label>
+        <label><input type="radio" name="type" value="delivery"> Dostawa</label>
+      </fieldset>
+      <label>Imię<input name="name" autocomplete="name" required></label>
+      <label>Telefon<input name="phone" type="tel" autocomplete="tel" required></label>
+      <label id="address-field" hidden>Adres dostawy<input name="address" autocomplete="street-address"></label>
+      <label>Uwagi<textarea name="note" rows="2" maxlength="500" placeholder="np. bez cebuli, ostry sos"></textarea></label>
+      <ul id="form-errors" class="errors" role="alert"></ul>
+      <button type="submit" class="primary" id="submit">Zamawiam</button>
+    </form>
+  </aside>
+</main>
+
+<button type="button" id="cart-bar" class="cart-bar" hidden>
+  <span>Koszyk · <b id="cart-count">0</b></span>
+  <strong id="cart-bar-total">0,00 zł</strong>
+</button>
+
+<dialog id="done">
+  <h2>Dziękujemy!</h2>
+  <p>Zamówienie <b id="done-id"></b> przyjęte. Do zapłaty: <b id="done-total"></b>.</p>
+  <p class="muted">Zadzwonimy, jeśli będzie trzeba coś potwierdzić.</p>
+  <form method="dialog"><button class="primary">OK</button></form>
+</dialog>
+
+<footer id="kontakt" class="footer">
+  <div class="wrap grid">
+    <div><h3>Adres</h3><p>ul. Marszałkowska 6<br>00-590 Warszawa</p></div>
+    <div><h3>Godziny</h3><p>pon. 9:00–22:00<br>wt.–nd. 10:00–22:00</p></div>
+    <div><h3>Telefon</h3><p><a href="tel:+48787851787">+48 787 851 787</a></p></div>
+  </div>
+</footer>
+
+<script src="/app.js" type="module"></script>
+</body>
+</html>
