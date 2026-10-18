@@ -9,6 +9,8 @@ npm install
 npm start
 ```
 
+На Windows можно просто дважды нажать на `start.bat`.
+
 Сайт откроется на http://localhost:3000. Для разработки с автоперезапуском: `npm run dev`. Тесты: `npm test`.
 
 ## Структура
