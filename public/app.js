@@ -25,6 +25,14 @@ function el(tag, props = {}, ...children) {
   return node;
 }
 
+function dishPhoto(item) {
+  const placeholder = el("div", { className: "photo placeholder", textContent: item.emoji || "🥙", ariaHidden: "true" });
+  if (!item.image) return placeholder;
+  const img = el("img", { className: "photo", src: item.image, alt: item.name, loading: "lazy" });
+  img.addEventListener("error", () => img.replaceWith(placeholder));
+  return img;
+}
+
 function renderMenu() {
   const groups = new Map();
   for (const item of menu) groups.set(item.category, [...(groups.get(item.category) || []), item]);
@@ -37,6 +45,7 @@ function renderMenu() {
       add.addEventListener("click", () => changeQty(item.id, 1));
       grid.append(
         el("article", { className: "dish" },
+          dishPhoto(item),
           el("h3", { textContent: item.name }),
           el("p", { textContent: item.description }),
           el("div", { className: "dish-foot" }, el("span", { className: "price", textContent: money.format(item.price) }), add)
